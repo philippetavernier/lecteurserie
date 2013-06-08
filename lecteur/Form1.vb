@@ -1,5 +1,10 @@
 ﻿Imports System.IO.Ports
 Imports Microsoft.Office.Interop
+<<<<<<< HEAD
+Public Class Form1
+
+#Region "Initialisation"
+=======
 
 
 Public Class Form1
@@ -12,6 +17,7 @@ Public Class Form1
     End Sub
 #End Region
 
+>>>>>>> 33701ab71b37476968cd410bdb5966bb00cf8dbb
     'Déclaration variables Exel'
     Dim xlapp As Excel.Application
     Dim xlbook As Excel.Workbook
@@ -24,9 +30,21 @@ Public Class Form1
     Public WithEvents comPort As SerialPort
     Public Event ScanDataRecieved(ByVal data As String)
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For Each pn As String In IO.Ports.SerialPort.GetPortNames
+            ComboBox1.Items.Clear()
+            ComboBox1.Items.Add(pn.ToString())
+        Next
+    End Sub
+#End Region
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             comPort = My.Computer.Ports.OpenSerialPort(ComboBox1.Text, "9600")
+<<<<<<< HEAD
+            Button1.Text = "connecté"
+=======
+>>>>>>> 33701ab71b37476968cd410bdb5966bb00cf8dbb
         Catch ex As Exception
             MsgBox("Une erreur est survenu", MsgBoxStyle.Critical)
         End Try
@@ -63,6 +81,7 @@ Public Class Form1
     End Sub
 #End Region
 
+#Region "gestion des données"
     Public Sub exel()
         xlapp = CType(CreateObject("Excel.Application"), Excel.Application)
         xlbook = xlapp.Workbooks.Open(Filename:="C:\Users\cedric gaucheron\Documents\Book2.xlsx", Editable:=True, ReadOnly:=False)
@@ -70,9 +89,12 @@ Public Class Form1
         xlapp.ActiveWorkbook.Save()
         xlbook.Close()
         xlapp.Quit()
-        x = x + 1
         y = y + 1
         RichTextBox1.Clear()
     End Sub
+<<<<<<< HEAD
+#End Region
+=======
 
+>>>>>>> 33701ab71b37476968cd410bdb5966bb00cf8dbb
 End Class
