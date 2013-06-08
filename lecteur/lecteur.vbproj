@@ -133,7 +133,7 @@
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="otkloadr">
       <Guid>{C04E4E5E-89E6-43C0-92BD-D3F2C7FBA5C4}</Guid>
