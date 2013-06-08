@@ -4,8 +4,6 @@ Imports Microsoft.Office.Interop
 Public Class Form1
 
 #Region "Initialisation"
-=======
-
 
 Public Class Form1
 
@@ -17,7 +15,6 @@ Public Class Form1
     End Sub
 #End Region
 
->>>>>>> 33701ab71b37476968cd410bdb5966bb00cf8dbb
     'Déclaration variables Exel'
     Dim xlapp As Excel.Application
     Dim xlbook As Excel.Workbook
@@ -41,10 +38,7 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             comPort = My.Computer.Ports.OpenSerialPort(ComboBox1.Text, "9600")
-<<<<<<< HEAD
             Button1.Text = "connecté"
-=======
->>>>>>> 33701ab71b37476968cd410bdb5966bb00cf8dbb
         Catch ex As Exception
             MsgBox("Une erreur est survenu", MsgBoxStyle.Critical)
         End Try
@@ -92,9 +86,5 @@ Public Class Form1
         y = y + 1
         RichTextBox1.Clear()
     End Sub
-<<<<<<< HEAD
 #End Region
-=======
-
->>>>>>> 33701ab71b37476968cd410bdb5966bb00cf8dbb
 End Class
