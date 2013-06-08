@@ -1,22 +1,32 @@
 ﻿Imports System.IO.Ports
 Imports Microsoft.Office.Interop
 
+
 Public Class Form1
-    'exel'
+
+#Region "Initialisation"
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For Each pn As String In IO.Ports.SerialPort.GetPortNames
+            ComboBox1.Items.Add(pn.ToString())
+        Next
+    End Sub
+#End Region
+
+    'Déclaration variables Exel'
     Dim xlapp As Excel.Application
     Dim xlbook As Excel.Workbook
     Dim xlsheet As Excel.Worksheet
     Dim x = 1
     Dim y = 1
 
-    'port'
+    'Vérouillage Port'
     Dim str As String
     Public WithEvents comPort As SerialPort
     Public Event ScanDataRecieved(ByVal data As String)
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            comPort = My.Computer.Ports.OpenSerialPort(TextBox1.Text, "19200")
+            comPort = My.Computer.Ports.OpenSerialPort(ComboBox1.Text, "9600")
         Catch ex As Exception
             MsgBox("Une erreur est survenu", MsgBoxStyle.Critical)
         End Try
@@ -64,4 +74,5 @@ Public Class Form1
         y = y + 1
         RichTextBox1.Clear()
     End Sub
+
 End Class
