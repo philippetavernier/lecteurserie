@@ -1,4 +1,4 @@
-﻿' Exemple de code : Ecoute de données sur le RS232, réception code barre 
+' Exemple de code : Ecoute de données sur le RS232, réception code barre 
 ' sous forme alphanumérique, stockage dans fichier Excel.
 
 Imports System.IO.Ports
@@ -195,4 +195,7 @@ Public Class Form1
 #End Region
 
 
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        System.Diagnostics.Process.Start("iexplore", "https://github.com/bachou/lecteurserie")
+    End Sub
 End Class
