@@ -138,7 +138,7 @@ Public Class Form1
 
         'Dans le cas d'un import, on cherche si la valeur existe et on place la valeur dans une cellule libre.
         If TrackBar.Value = 0 Then
-            With xlapp.Workbooks(1).Worksheets("Feuil1").Range("A1:A65000")
+            With xlbook.Worksheets.Item(1).Range("A1:A65000")
                 c = .Find(COMReceive.Text)
                 If Not c Is Nothing Then
                     MsgBox("Attention : ce code existe déjà dans les imports (Ignoré)", MsgBoxStyle.Critical)
@@ -150,7 +150,7 @@ Public Class Form1
                 End If
             End With
         Else
-            With xlapp.Workbooks(1).Worksheets("Feuil1").Range("A1:A65000")
+            With xlbook.Worksheets.Item(1).Range("A1:A65000")
                 c = .Find(COMReceive.Text)
                 If c Is Nothing Then
                     MsgBox("Attention : ce code n'existe pas à l'origine dans la colonne Import", MsgBoxStyle.Critical)

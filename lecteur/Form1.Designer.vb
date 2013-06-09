@@ -63,7 +63,7 @@ Partial Class Form1
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(16, 9)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(384, 24)
         Me.ComboBox1.TabIndex = 4
@@ -82,7 +82,7 @@ Partial Class Form1
         'ButtonSwitchCom
         '
         Me.ButtonSwitchCom.Location = New System.Drawing.Point(443, 9)
-        Me.ButtonSwitchCom.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ButtonSwitchCom.Margin = New System.Windows.Forms.Padding(4)
         Me.ButtonSwitchCom.Name = "ButtonSwitchCom"
         Me.ButtonSwitchCom.Size = New System.Drawing.Size(100, 28)
         Me.ButtonSwitchCom.TabIndex = 6
@@ -96,7 +96,7 @@ Partial Class Form1
         Me.COMReceive.Enabled = False
         Me.COMReceive.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.COMReceive.Location = New System.Drawing.Point(19, 91)
-        Me.COMReceive.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.COMReceive.Margin = New System.Windows.Forms.Padding(4)
         Me.COMReceive.Name = "COMReceive"
         Me.COMReceive.ReadOnly = True
         Me.COMReceive.Size = New System.Drawing.Size(568, 34)
@@ -107,7 +107,7 @@ Partial Class Form1
         'TrackBar
         '
         Me.TrackBar.Location = New System.Drawing.Point(124, 145)
-        Me.TrackBar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TrackBar.Margin = New System.Windows.Forms.Padding(4)
         Me.TrackBar.Maximum = 1
         Me.TrackBar.Name = "TrackBar"
         Me.TrackBar.Size = New System.Drawing.Size(344, 56)
