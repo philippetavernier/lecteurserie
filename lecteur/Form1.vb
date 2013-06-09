@@ -40,7 +40,7 @@ Public Class Form1
         If Not My.Computer.FileSystem.FileExists(s & "\data.xlsx") Then
             xlapp = New Excel.ApplicationClass
             xlbook = xlapp.Workbooks.Add(misValue)
-            xlsheet = xlapp.Workbooks(1).Worksheets("Feuil1")
+            xlsheet = xlbook.Worksheets.Item(1)
             xlsheet.Cells(1, 1) = "IMPORT"
             xlsheet.Cells(1, 2) = 1 'Pour le nombre de cellules en A (LastrowIMPORT)
             xlsheet.Cells(1, 3) = 1 'Pour le nombre de cellules en D (lastrowEXPORT)
